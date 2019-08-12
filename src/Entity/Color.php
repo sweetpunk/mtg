@@ -142,4 +142,22 @@ class Color
         return $this;
     }
 
+    /**
+     * @return Card
+     */
+    public function getCard(): Card
+    {
+        return $this->card;
+    }
+
+    /**
+     * @param Card $card
+     * @return Color
+     */
+    public function setCard(Card $card): Color
+    {
+        $this->card = $card;
+
+        return $this;
+    }
 }

@@ -50,10 +50,16 @@ class User
      */
     private $updatedAt;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Card", inversedBy="user")
+     */
+    private $cards;
+
     public function __construct()
     {
         $this->createdAt = new \DateTime();
         $this->updatedAt = new \DateTime();
+        $this->cards = new ArrayCollection();
     }
 
     /**
@@ -174,6 +180,25 @@ class User
     public function setUpdatedAt(\DateTime $updatedAt): User
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * @return ArrayCollection|Card[]
+     */
+    public function getCards(): ArrayCollection
+    {
+        return $this->cards;
+    }
+
+    /**
+     * @param ArrayCollection $cards
+     * @return User
+     */
+    public function setCards(ArrayCollection $cards): User
+    {
+        $this->cards = $cards;
 
         return $this;
     }

@@ -67,6 +67,7 @@ class Edition
     {
         $this->createdAt = new \DateTime();
         $this->updatedAt = new \DateTime();
+        $this->card = new ArrayCollection();
     }
 
     /**

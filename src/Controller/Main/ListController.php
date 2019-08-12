@@ -10,7 +10,6 @@ class ListController
 {
     public function collection() : Response
     {
-
         return new Response('salut c\'est cool');
     }
 }

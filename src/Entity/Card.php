@@ -54,6 +54,11 @@ class Card
      */
     private $updatedAt;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="cards")
+     */
+    private $user;
+
     public function __construct()
     {
         $this->createdAt = new \DateTime();
@@ -178,6 +183,25 @@ class Card
     public function setUpdatedAt(\DateTime $updatedAt): Card
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * @return User
+     */
+    public function getUser(): User
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param mixed $user
+     * @return Card
+     */
+    public function setUser($user): Card
+    {
+        $this->user = $user;
 
         return $this;
     }
