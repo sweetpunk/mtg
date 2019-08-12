@@ -161,6 +161,6 @@ class __TwigTemplate_f7d69a234a682be1945d7726177c0467ed8b36e5b977e7ca2142d5ec44f
         </tr>
     </tbody>
 </table>
-", "@Twig/Exception/traces_text.html.twig", "/home/louis/Bureau/mtg/vendor/symfony/twig-bundle/Resources/views/Exception/traces_text.html.twig");
+", "@Twig/Exception/traces_text.html.twig", "/var/www/mtg/vendor/symfony/twig-bundle/Resources/views/Exception/traces_text.html.twig");
     }
 }

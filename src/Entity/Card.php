@@ -35,12 +35,12 @@ class Card
     private $card_cost;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Edition", mappedBy="card")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Edition", inversedBy="card")
      */
     private $edition;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Color", mappedBy="card")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Color", inversedBy="card")
      */
     private $color;
 

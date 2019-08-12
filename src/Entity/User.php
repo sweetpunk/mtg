@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -51,7 +52,7 @@ class User
     private $updatedAt;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Card", inversedBy="user")
+     * @ORM\OneToMany(targetEntity="Card", mappedBy="user")
      */
     private $cards;
 
@@ -185,18 +186,18 @@ class User
     }
 
     /**
-     * @return ArrayCollection|Card[]
+     * @return Collection|Card[]
      */
-    public function getCards(): ArrayCollection
+    public function getCards(): Collection
     {
         return $this->cards;
     }
 
     /**
-     * @param ArrayCollection $cards
+     * @param Collection|Card[] $cards
      * @return User
      */
-    public function setCards(ArrayCollection $cards): User
+    public function setCards($cards): User
     {
         $this->cards = $cards;
 

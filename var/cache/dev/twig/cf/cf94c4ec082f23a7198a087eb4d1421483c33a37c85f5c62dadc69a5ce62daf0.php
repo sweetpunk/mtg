@@ -874,6 +874,6 @@ class __TwigTemplate_95a4c12ea16e6ecf909136428bf8e51b3cf164bd48831592df90b75be0e
         </tbody>
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/translation.html.twig", "/home/louis/Bureau/mtg/vendor/symfony/web-profiler-bundle/Resources/views/Collector/translation.html.twig");
+", "@WebProfiler/Collector/translation.html.twig", "/var/www/mtg/vendor/symfony/web-profiler-bundle/Resources/views/Collector/translation.html.twig");
     }
 }

@@ -3,5 +3,5 @@
 #    controller: App\Controller\DefaultController::index
 
 list:
-    path: /
+    path: /list
     controller: App\Controller\Main\ListController::collection
